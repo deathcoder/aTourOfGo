@@ -1,0 +1,10 @@
+#!/bin/bash
+
+basedir=$(dirname "$0")
+
+if [ "$1" == "all" ]; then
+  find "$basedir/cmd" -maxdepth 1 -type d ! -path "$basedir/cmd" -printf "%f\n" | xargs -I '{}' bash -c "echo Running {}; echo -ne \"  \"; go run \"$basedir/cmd/{}/main.go\""
+else
+  exercise="$*"
+  go run "$basedir/cmd/$exercise/main.go"
+fi
