@@ -1,7 +1,17 @@
 # A Tour of Go
 https://tour.golang.org/
 
+#### well this is taking longer than i anticipated, so will add things here when i encounter use cases
+
+## Progress
+
+### - Basics [9/17]
+### - Flow control [0/14]
+### - More types [0/27]
+### - Methods [0/26]
+### - Concurrency [0/11]
 ## Run all exercises
+
 ```bash
 ./run all
 ```
