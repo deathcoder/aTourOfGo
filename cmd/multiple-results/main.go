@@ -6,6 +6,7 @@ func swap(x, y string) (string, string) {
 	return y, x
 }
 
+// Multiple results (https://tour.golang.org/basics/6)
 // A function can return any number of results.
 // The swap function returns two strings.
 func main() {

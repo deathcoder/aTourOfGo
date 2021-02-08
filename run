@@ -2,9 +2,14 @@
 
 basedir=$(dirname "$0")
 
+
 if [ "$1" == "all" ]; then
-  find "$basedir/cmd" -maxdepth 1 -type d ! -path "$basedir/cmd" -printf "%f\n" | xargs -I '{}' bash -c "echo Running {}; echo -ne \"  \"; go run \"$basedir/cmd/{}/main.go\""
+  find "$basedir/cmd" -maxdepth 1 -type d ! -path "$basedir/cmd" -printf "%f\n" | xargs -I '{}' bash -c "echo Running {}; go run \"$basedir/cmd/{}/main.go\" | sed 's/^/  > /'"
+elif [ "$1" == "all-doc" ]; then
+  find "$basedir/cmd" -maxdepth 1 -type d ! -path "$basedir/cmd" -printf "%f\n" | xargs -I '{}' bash -c "echo Running {}; go doc -u -src --all \"$basedir/cmd/{}\" | grep // | sed 's|//||' | sed 's/^/  /'; go run \"$basedir/cmd/{}/main.go\" | sed 's/^/  > /'"
 else
   exercise="$*"
+  echo "Running $exercise"
+  go doc -u -src --all $basedir/cmd/$exercise | grep //
   go run "$basedir/cmd/$exercise/main.go"
 fi
