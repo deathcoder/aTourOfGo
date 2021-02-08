@@ -18,10 +18,10 @@ func main() {
 	fmt.Println(split(17))
 
 	/*
-	Multiple-value split(...) (int, int) in single-value context
-	fmt.Printf("%s", split(85))
-	fmt.Printf("%s, %s", split(85))
-    */
+		Multiple-value split(...) (int, int) in single-value context
+		fmt.Printf("%s", split(85))
+		fmt.Printf("%s, %s", split(85))
+	*/
 
 	x, y := split(35)
 	fmt.Printf("%d, %d\n", x, y)
