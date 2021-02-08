@@ -10,11 +10,18 @@ https://tour.golang.org/
 ### - More types [0/27]
 ### - Methods [0/26]
 ### - Concurrency [0/11]
+
 ## Run all exercises
 
 ```bash
 ./run all
 ```
+
+## Run all exercises and display documentation
+```bash
+./run all-doc
+```
+
 ## Run exercise
 ```bash
 ./run <exercise-name>
