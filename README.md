@@ -1,13 +1,22 @@
 # A Tour of Go
 https://tour.golang.org/
 
-# Setup new exercise
+## Run all exercises
+```bash
+./run all
+```
+## Run exercise
+```bash
+./run <exercise-name>
+```
+
+### Setup new exercise
 The following script setups a project under `/cmd` folder, 
 ```bash
 ./new <exercise-name>
 ```
 
-## project setup
+### project setup inspiration
 https://www.wolfe.id.au/2020/03/10/starting-a-go-project/
 
 https://www.wolfe.id.au/2020/03/10/how-do-i-structure-my-go-project/
