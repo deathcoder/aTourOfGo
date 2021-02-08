@@ -21,3 +21,5 @@ EOF
 
 echo "Formatting project..."
 go fmt "$basedir/..."  2>/dev/null
+
+git add "$basedir"
