@@ -1,6 +1,12 @@
 # A Tour of Go
 https://tour.golang.org/
 
+# Setup new exercise
+The following script setups a project under `/cmd` folder, 
+```bash
+./new <exercise-name>
+```
+
 ## project setup
 https://www.wolfe.id.au/2020/03/10/starting-a-go-project/
 

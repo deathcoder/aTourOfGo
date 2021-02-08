@@ -1,0 +1,20 @@
+#!/bin/bash
+
+basedir=$(dirname "$0")
+exercise="cmd/$*"
+
+cd "$basedir" || exit 1
+echo "Setting up new exercise: $exercise"
+mkdir -p "$exercise"
+tee "$exercise/main.go" << EOF
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("My favorite number is 42")
+}
+
+EOF
